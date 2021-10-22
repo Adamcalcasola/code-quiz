@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+}
+
+header.highScore {
+    align-content: flex-start;
+}
+
+header.quizTimer {
+    align-content: flex-end;
+}
+
+/* main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}*/
+
+h1 {
+    text-align: center;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+}
+
+div p {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+button {
+    align-items: center;
+    font-size: larger;
+}
