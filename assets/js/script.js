@@ -8,6 +8,14 @@ var answerA = document.createElement("button");
 var answerB = document.createElement("button");
 var answerC = document.createElement("button");
 var answerD = document.createElement("button");
+var enterInitials = document.createElement("h2");
+var initialsInput = document.createElement("input");
+var submitBtn = document.createElement("button");
+var index = 0;
+var timeLeft = 50
+
+enterInitials.textContent = "Enter Initials ";
+submitBtn.textContent = "Submit";
 
 answerA.className = "btn";
 answerB.className = "btn";
@@ -15,8 +23,7 @@ answerC.className = "btn";
 answerD.className = "btn";
 
 //document.querySelector("#highScore");
-var index = 0;
-var timeLeft = 5
+
 
 // Array of Question Objects
 var questions = [
@@ -72,8 +79,8 @@ var questions = [
     // call function for next question(iterate through array of objects?)
 
 function checkAnswers () {
-    console.log(this.innerHTML);
-    console.log(questions[index].correctAnswer);
+    // console.log(this.innerHTML);
+    // console.log(questions[index].correctAnswer);
     if (this.innerHTML === questions[index].correctAnswer) {
         //document.querySelector("#content").appendChild = "Correct";
         console.log("correct");
@@ -82,11 +89,9 @@ function checkAnswers () {
         ///document.querySelector("#content").appendChild = "Incorrect";
         console.log("incorrect")
         timeLeft -= 10;
-    }
-
-    
+    };
     index++;
-    displayQuestions();
+    //displayQuestions();
 };
 
 function displayQuestions () {
@@ -110,37 +115,36 @@ function displayQuestions () {
         answers.appendChild(answerC);
         answers.appendChild(answerD);
 };
-function startTimer () {
-
-    if (index === questions.length || timeLeft === 0) {
-        return endQuiz();
-    } else {
-        timeLeft--;
-        document.querySelector("#quizTimer").innerHTML = "time " + timeLeft;
-    }
-};
 
 function endQuiz () {
-    //mainContent.innerHTML = "";
+    
     header.textContent = "All Done";
     answers.textContent = "Your Final Score is " + timeLeft;
-    answers.textContent = "Enter Initials ";
-    //input box button
+    mainContent.appendChild(enterInitials);
+    mainContent.appendChild(initialsInput);
+    mainContent.appendChild(submitBtn);
 
     saveHighScore();
     console.log("End Quiz");
-}
+};
+
+function startTimer () {
+    if (index === questions.length || timeLeft <= 0) {
+        return endQuiz();
+    } else {
+        timeLeft--;
+        document.querySelector("#quizTimer").innerHTML = "Time: " + timeLeft;
+    };
+};
+
 function startGame () {
-//    setTimeout(function() {
-//       console.log("time", 75000)
-//    });
-    index = 0;
-    document.querySelector("#quizTimer").innerHTML = "time " + timeLeft;
+    
+    document.querySelector("#quizTimer").innerHTML = "Time: " + timeLeft;
     setInterval(startTimer, 1000);
     document.querySelector("#instructions").innerHTML = "";
     mainContent.removeChild(startBtn);
 
-    displayQuestions ()
+    displayQuestions();
 };
 
 function saveHighScore() {
@@ -151,7 +155,7 @@ function saveHighScore() {
 };
 
 function displayHighScore() {
-    header.textContent = "High Scores";
+    header.textContent = "High Scores ";
 
     console.log("record");
 };

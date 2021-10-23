@@ -2,30 +2,30 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
+};
 
 header.highScore {
     align-content: flex-start;
-}
+};
 
 header.quizTimer {
     align-content: flex-end;
-}
+};
 
-/* main {
+#content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}*/
+};
 
 h1 {
     text-align: center;
-}
+};
 
 #answers {
     display: flex;
     flex-direction: column;
-}
+};
 
 
 #instructions {
@@ -34,9 +34,9 @@ h1 {
     align-content: center;
     justify-content: center;
     width: 500px;
-}
+};
 
 button {
     align-items: center;
     font-size: larger;
-}
+};
