@@ -1,7 +1,7 @@
 header {
     width: 100%;
     display: flex;
-    justify-content: stretch;
+    flex-direction: column;
 }
 
 header.highScore {
@@ -27,9 +27,11 @@ h1 {
     flex-direction: column;
 }
 
-div p {
+
+#instructions {
     text-align: center;
     align-items: center;
+    align-content: center;
     justify-content: center;
     width: 500px;
 }
