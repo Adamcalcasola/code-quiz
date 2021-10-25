@@ -13,6 +13,6 @@
 - The high scores screen can be reset by the user.
 - In the high scores screen they can return to the main screen and start the quiz over again to beat their score.
 
-![code-quiz screenshot](/Assets/images/Screenshot_2021-10-24-212558.png?raw=true "screenshot")
+![code-quiz screenshot](/Assets/images/Screenshot_2021-10-24_212558.png?raw=true "screenshot")
 
 https://adamcalcasola.github.io/code-quiz/
