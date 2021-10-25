@@ -1,42 +1,39 @@
-header {
-    width: 100%;
-    /* display: flex;
-    flex-direction: column;*/
-};
-
-header.highScore {
-    align-content: flex-start;
-};
-
-header.quizTimer {
-    align-content: flex-end;
-};
-
-#content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-};
-
-h1 {
+body {
     text-align: center;
-};
+    align-content: center;
+}
+
+#quiz-timer {
+    font-size: medium;
+}
+
+#header {
+    margin-top: 100px;
+}
 
 #answers {
-    display: flex;
-    flex-direction: column;
-};
-
+    font-size: large;
+    padding-top: 0px;
+}
 
 #instructions {
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 500px;
-};
+    font-size: large;
+}
+ol {
+    display: inline;
+    list-style-position: inside;
+    margin: 0px;
+}
+
+li {
+    margin: 20px;
+}
 
 button {
-    align-items: center;
-    font-size: 40px;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    
+    width: 200px;
+    font-size: large;
 };
